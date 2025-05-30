@@ -1,1 +1,1 @@
-# MBTI-2025-
+# inspect mbti project
