@@ -1,1 +1,1 @@
-# inspect mbti project
+# Project of The inspect MBTI
