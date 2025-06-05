@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI 검사 결과</title>
+  <link rel="stylesheet" href="mainstyle.css" />
+  <script src="resultData.js"></script>
+  <script src="resultScript.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="main.html" class="logo-link">
+        <img src="logo.png" alt="성격의 정원 로고" class="logo" />
+      </a>
+      <nav class="nav-menu">
+        <a href="test.html">MBTI 검사</a>
+        <a href="types.html">MBTI 유형소개</a>
+        <a href="match.html">궁합 확인하기</a>
+      </nav>
+    </header>
+
+
+    <div class="result-summary">
+      <h2 id="mbti-result"></h2>
+      <img id="mbti-image" class="mbti-image" src="" alt="MBTI 이모지">
+      <p class="mbti-code">당신의 성격 유형: <span class="nickname"></span></p>
+      <div class="mbti-description desc-box"></div>
+    </div>
+
+    <div class="trait-bars">
+      <div class="trait-bar">
+        <div class="trait-label"></div>
+        <div class="bar">
+          <div class="fill left-fill"></div>   <!-- 왼쪽 성향 퍼센트 -->
+          <div class="fill right-fill"></div>  <!-- 오른쪽 성향 퍼센트 -->
+          <div class="circle"></div>
+        </div>
+        <div class="bar-labels">
+          <span class="left-label">왼쪽 성향</span>
+          <span class="right-label">오른쪽 성향</span>
+        </div>
+      </div>
+      <div class="trait-bar">
+        <div class="trait-label"></div>
+        <div class="bar">
+          <div class="fill left-fill"></div>   <!-- 왼쪽 성향 퍼센트 -->
+          <div class="fill right-fill"></div>  <!-- 오른쪽 성향 퍼센트 -->
+          <div class="circle"></div>
+        </div>
+        <div class="bar-labels">
+          <span class="left-label">왼쪽 성향</span>
+          <span class="right-label">오른쪽 성향</span>
+        </div>
+      </div>
+      <div class="trait-bar">
+        <div class="trait-label"></div>
+        <div class="bar">
+          <div class="fill left-fill"></div>   <!-- 왼쪽 성향 퍼센트 -->
+          <div class="fill right-fill"></div>  <!-- 오른쪽 성향 퍼센트 -->
+          <div class="circle"></div>
+        </div>
+        <div class="bar-labels">
+          <span class="left-label">왼쪽 성향</span>
+          <span class="right-label">오른쪽 성향</span>
+        </div>
+      </div>
+      <div class="trait-bar">
+        <div class="trait-label"></div>
+        <div class="bar">
+          <div class="fill left-fill"></div>   <!-- 왼쪽 성향 퍼센트 -->
+          <div class="fill right-fill"></div>  <!-- 오른쪽 성향 퍼센트 -->
+          <div class="circle"></div>
+        </div>
+        <div class="bar-labels">
+          <span class="left-label">왼쪽 성향</span>
+          <span class="right-label">오른쪽 성향</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-section">
+      <h4>추천 직업</h4>
+      <div class="career-tags"></div>
+
+      <h4>나와 같은 mbti를 가진 연예인</h4>
+      <div class="mbti-celebrities"></div>
+
+      <h4>내 mbti의 장점</h4>
+      <div class="mbti-strengths"></div>
+
+      <h4>내 mbti의 단점</h4>
+      <div class="mbti-weaknesses"></div>
+
+      <h4>개인적 성장</h4>
+      <div id="growth" class="desc-box"></div>
+
+      <h4>인간 관계</h4>
+      <div id="relationship" class="desc-box"></div>
+
+      <h4>좋은 궁합</h4>
+      <div id="matchGood" class="desc-box"></div>
+
+      <h4>나쁜 궁합</h4>
+      <div id="matchBad" class="desc-box"></div>
+      <div class="mbti-match">
+
+
+      </div>
+
+    </div>
+
+    <div class="result-buttons">
+      <a href="test.html" class="btn retry-btn">다시하기</a>
+      <a href="main.html" class="btn">다른 유형 보러가기</a>
+    </div>
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-logo">성격의 정원</p>
+    <p>© 2025 성격의 정원. - 김해진, 이수진</p>
+  </div>
+  </footer>
+  
+  </div>
+</body>
+</html>
