@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI 궁합 확인</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+  <header class="site-header">
+    <a href="main.html" class="logo-link">
+      <img src="logo.png" alt="성격의 정원 로고" class="logo" />
+    </a>
+    <nav class="nav-menu">
+      <a href="test.html">MBTI 검사</a>
+      <a href="select.html">MBTI 유형소개</a>
+      <a href="gounghab.html">궁합 확인하기</a>
+    </nav>
+  </header>
+
+  <!-- 선택 영역 -->
+  <div id="select-page">
+    <main>
+      <div class="intro">
+        <h1>나와 상대방의 궁합을 확인하세요!</h1>
+        <p>우리의 궁합은 어떨까?</p>
+        <p>✅ 1점부터 10점까지! 우리의 궁합을 점수로 확인하세요!</p>
+      </div>
+
+      <div class="select-area">
+        <div class="user-wrapper">
+          <p class="user-label">나</p>
+          <div class="user-box">
+            <div id="me-result" class="result-box"></div>
+            <button id="me-button" onclick="startSelection('me')">선택하기</button>
+          </div>
+        </div>
+
+        <div class="heart">
+        <img src="image/heart.png" alt="heart">
+        </div>
+
+        <div class="user-wrapper">
+          <p class="user-label">상대방</p>
+          <div class="user-box">
+            <div id="you-result" class="result-box"></div>
+            <button id="you-button" onclick="startSelection('you')">선택하기</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mbti-grid" id="mbti-grid">
+        <div class="mbti-gounghab" onclick="selectMbti('ISTJ')">
+          <img src="mbtiemoji/ISTJ.png" alt="ISTJ">
+          <span>ISTJ</span>
+        </div>
+        <div class="mbti-gounghab" onclick="selectMbti('ISFJ')">
+          <img src="mbtiemoji/ISFJ.png" alt="ISFJ">
+          <span>ISFJ</span>
+        </div>
+        <div class="mbti-gounghab" onclick="selectMbti('INFJ')">
+          <img src="mbtiemoji/INFJ.png" alt="INFJ">
+          <span>INFJ</span>
+        </div>
+        <div class="mbti-gounghab" onclick="selectMbti('INTJ')">
+          <img src="mbtiemoji/INTJ.png" alt="INTJ">
+          <span>INTJ</span>
+        </div>
+        
+        <div class="mbti-gounghab" onclick="selectMbti('ISTP')">
+          <img src="mbtiemoji/ISTP.png" alt="ISTP이모지">
+          <span>ISTP</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('ISFP')">
+          <img src="mbtiemoji/ISFP.png" alt="ISFP이모지">
+          <span>ISFP</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('INFP')">
+          <img src="mbtiemoji/INFP.png" alt="INFP이모지">
+          <span>INFP</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('INTP')">
+          <img src="mbtiemoji/INTP.png" alt="INTP이모지">
+          <span>INTP</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('ESTP')">
+          <img src="mbtiemoji/ESTP.png" alt="ESTP이모지">
+          <span>ESTP</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('ESFP')">
+          <img src="mbtiemoji/ESFP.png" alt="ESFP이모지">
+          <span>ESFP</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('ENFP')">
+          <img src="mbtiemoji/ENFP.png" alt="ENFP이모지">
+          <span>ENFP</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('ENTP')">
+          <img src="mbtiemoji/ENTP.png" alt="ENTP이모지">
+          <span>ENTP</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('ESTJ')">
+          <img src="mbtiemoji/ESTJ.png" alt="ESTJ이모지">
+          <span>ESTJ</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('ESFJ')">
+          <img src="mbtiemoji/ESFJ.png" alt="ESFJ이모지">
+          <span>ESFJ</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('ENFJ')">
+          <img src="mbtiemoji/ENFJ.png" alt="ENFJ이모지">
+          <span>ENFJ</span>
+        </div>
+
+        <div class="mbti-gounghab" onclick="selectMbti('ENTJ')">
+          <img src="mbtiemoji/ENTJ.png" alt="ENTJ이모지">
+          <span>ENTJ</span>
+        </div>
+      </div>
+      
+      <p>MBTI를 선택하고 결과를 확인해보세요!</p>
+      <button id="result-btn">결과 확인하기</button>
+    </main>
+  </div>
+
+  <!-- 결과 페이지 -->
+  <div id="result-page" style="display: none;">
+    <h2>| 나와 상대방의 궁합 점수는?</h2>
+    <div class="text">
+      <p>10점 만점에...</p>
+      <h1 id="result-score"></h1>
+      <p id="result-comment"></p>
+    </div>
+
+    <div class="result-faces">
+      <div class="face-box">
+        <div class="label">나</div>
+        <div class="face">
+          <img id="face-left" src="" alt="왼쪽 이모지">
+          <div class="mbti-text" id="me-mbti-label">MBTI</div>
+        </div>
+      </div>
+
+      <img class="heart-icon" src="image/heart.png" alt="하트">
+
+      <div class="face-box">
+        <div class="label">상대방</div>
+        <div class="face">
+          <img id="face-right" src="" alt="오른쪽 이모지">
+          <div class="mbti-text" id="you-mbti-label">MBTI</div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="caution-box">
+      <p><strong>⚠️ 관계 주의사항</strong></p>
+      <div id="result-warning"></div>
+    </div>
+
+    <button class="restart" onclick="restart()">다시 하러 가기</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    let currentTarget = null;
+    let meSelected = null;
+    let youSelected = null;
+
+    const mbtiScoreMap = {
+      ISTJ: { ISTJ: 8, ISFJ: 7, INFJ: 5, INTJ: 6, ISTP: 7, ISFP: 4, INFP: 3, INTP: 5, ESTP: 6, ESFP: 2, ENFP: 1, ENTP: 4, ESTJ: 9, ESFJ: 7, ENFJ: 4, ENTJ: 6 },
+      ISFJ: { ISTJ: 7, ISFJ: 8, INFJ: 6, INTJ: 5, ISTP: 6, ISFP: 7, INFP: 5, INTP: 4, ESTP: 5, ESFP: 6, ENFP: 3, ENTP: 2, ESTJ: 8, ESFJ: 9, ENFJ: 6, ENTJ: 4 },
+      INFJ: { ISTJ: 5, ISFJ: 6, INFJ: 8, INTJ: 7, ISTP: 6, ISFP: 7, INFP: 9, INTP: 7, ESTP: 3, ESFP: 2, ENFP: 8, ENTP: 6, ESTJ: 4, ESFJ: 5, ENFJ: 8, ENTJ: 7 },
+      INTJ: { ISTJ: 6, ISFJ: 5, INFJ: 7, INTJ: 8, ISTP: 6, ISFP: 4, INFP: 6, INTP: 8, ESTP: 3, ESFP: 2, ENFP: 5, ENTP: 7, ESTJ: 7, ESFJ: 5, ENFJ: 6, ENTJ: 9 },
+      ISTP: { ISTJ: 7, ISFJ: 6, INFJ: 6, INTJ: 6, ISTP: 8, ISFP: 7, INFP: 6, INTP: 7, ESTP: 6, ESFP: 5, ENFP: 5, ENTP: 6, ESTJ: 5, ESFJ: 4, ENFJ: 4, ENTJ: 6 },
+      ISFP: { ISTJ: 4, ISFJ: 7, INFJ: 7, INTJ: 4, ISTP: 7, ISFP: 8, INFP: 9, INTP: 6, ESTP: 5, ESFP: 6, ENFP: 6, ENTP: 5, ESTJ: 3, ESFJ: 6, ENFJ: 5, ENTJ: 3 },
+      INFP: { ISTJ: 3, ISFJ: 5, INFJ: 9, INTJ: 6, ISTP: 6, ISFP: 9, INFP: 8, INTP: 7, ESTP: 4, ESFP: 5, ENFP: 9, ENTP: 6, ESTJ: 2, ESFJ: 4, ENFJ: 8, ENTJ: 5 },
+      INTP: { ISTJ: 5, ISFJ: 4, INFJ: 7, INTJ: 8, ISTP: 7, ISFP: 6, INFP: 7, INTP: 8, ESTP: 5, ESFP: 4, ENFP: 6, ENTP: 9, ESTJ: 4, ESFJ: 3, ENFJ: 5, ENTJ: 8 },
+      ESTP: { ISTJ: 6, ISFJ: 5, INFJ: 3, INTJ: 3, ISTP: 6, ISFP: 5, INFP: 4, INTP: 5, ESTP: 8, ESFP: 9, ENFP: 7, ENTP: 7, ESTJ: 7, ESFJ: 6, ENFJ: 6, ENTJ: 6 },
+      ESFP: { ISTJ: 2, ISFJ: 6, INFJ: 2, INTJ: 2, ISTP: 5, ISFP: 6, INFP: 5, INTP: 4, ESTP: 9, ESFP: 8, ENFP: 8, ENTP: 6, ESTJ: 6, ESFJ: 7, ENFJ: 7, ENTJ: 5 },
+      ENFP: { ISTJ: 1, ISFJ: 3, INFJ: 8, INTJ: 5, ISTP: 5, ISFP: 6, INFP: 9, INTP: 6, ESTP: 7, ESFP: 8, ENFP: 8, ENTP: 8, ESTJ: 4, ESFJ: 5, ENFJ: 9, ENTJ: 6 },
+      ENTP: { ISTJ: 4, ISFJ: 2, INFJ: 6, INTJ: 7, ISTP: 6, ISFP: 5, INFP: 6, INTP: 9, ESTP: 7, ESFP: 6, ENFP: 8, ENTP: 8, ESTJ: 6, ESFJ: 4, ENFJ: 7, ENTJ: 9 },
+      ESTJ: { ISTJ: 9, ISFJ: 8, INFJ: 4, INTJ: 7, ISTP: 5, ISFP: 3, INFP: 2, INTP: 4, ESTP: 7, ESFP: 6, ENFP: 4, ENTP: 6, ESTJ: 8, ESFJ: 9, ENFJ: 5, ENTJ: 7 },
+      ESFJ: { ISTJ: 7, ISFJ: 9, INFJ: 5, INTJ: 5, ISTP: 4, ISFP: 6, INFP: 4, INTP: 3, ESTP: 6, ESFP: 7, ENFP: 5, ENTP: 4, ESTJ: 9, ESFJ: 8, ENFJ: 6, ENTJ: 6 },
+      ENFJ: { ISTJ: 4, ISFJ: 6, INFJ: 8, INTJ: 6, ISTP: 4, ISFP: 5, INFP: 8, INTP: 5, ESTP: 6, ESFP: 7, ENFP: 9, ENTP: 7, ESTJ: 5, ESFJ: 6, ENFJ: 8, ENTJ: 8 },
+      ENTJ: { ISTJ: 6, ISFJ: 4, INFJ: 7, INTJ: 9, ISTP: 6, ISFP: 3, INFP: 5, INTP: 8, ESTP: 6, ESFP: 5, ENFP: 6, ENTP: 9, ESTJ: 7, ESFJ: 6, ENFJ: 8, ENTJ: 8 }
+    };
+
+
+
+    function startSelection(target) {
+      if (currentTarget !== null) {
+        alert("선택을 완료해주세요.");
+        return;
+      }
+
+      currentTarget = target;
+      document.getElementById(`${target}-button`).style.display = 'none';
+      document.getElementById(`${target}-result`).innerHTML = '';
+      
+      if (target === 'me') meSelected = null;
+      if (target === 'you') youSelected = null;
+
+      enableMbtigounghabs();
+    }
+
+    function selectMbti(type) {
+      if (!currentTarget) return;
+      const resultBox = document.getElementById(`${currentTarget}-result`);
+      resultBox.innerHTML = `<img src="mbtiemoji/${type}.png" alt="${type}"><br><span>${type}</span>`;
+      document.getElementById(`${currentTarget}-button`).style.display = 'inline-block';
+
+      if (currentTarget === 'me') meSelected = type;
+      if (currentTarget === 'you') youSelected = type;
+
+      currentTarget = null;
+      disableMbtigounghabs();
+
+      if (currentTarget === 'me') {
+        document.getElementById('me-button').style.display = 'inline-block';
+      } else if (currentTarget === 'you') {
+        document.getElementById('you-button').style.display = 'inline-block';
+      }
+    }
+
+    function enableMbtigounghabs() {
+      document.getElementById('mbti-grid').style.display = 'grid';
+    }
+
+    function disableMbtigounghabs() {
+      document.getElementById('mbti-grid').style.display = 'none';
+    }
+
+    function getWarningMessage(score) {
+      if (score <= 3) return '서로의 배려가 필요한 관계예요! 서로의 다름을 인정하고 존중하는 노력이 필요합니다!';
+      if (score <= 6) return '비슷한 점과 다른 점이 공존하는 보통 관계예요! 충분한 대화를 통해 갈등을 줄이고 서로의 방식을 이해하는 노력이 필요합니다!';
+      return '멋진 관계가 될 수 있어요! 자연스러운 소통이 가능하며 서로에게 의지되는 존재가 될 수 있습니다!';
+    }
+
+
+    document.getElementById('result-btn').addEventListener('click', function () {
+      if (!meSelected || !youSelected) {
+        alert('⚠ 나와 상대방의 MBTI를 모두 선택해야 결과를 확인할 수 있어요!');
+        return;
+      }
+
+      const score = mbtiScoreMap[meSelected]?.[youSelected];
+      const comment = getRelationshipComment(score);
+      const expressionImg = getExpressionImage(score); // ✅ 점수에 맞는 이모지 파일
+
+      document.getElementById('select-page').style.display = 'none';
+      document.getElementById('result-page').style.display = 'block';
+
+      document.getElementById('result-score').textContent = `⭐ ${score}점! ⭐`;
+      document.getElementById('result-comment').textContent = comment;
+      document.getElementById('result-warning').textContent = getWarningMessage(score);
+
+
+      // ✅ 좌우 동일한 점수 이모지 삽입
+      document.getElementById('face-left').src = expressionImg;
+      document.getElementById('face-right').src = expressionImg;
+      // 선택된 MBTI 반영
+      document.getElementById('me-mbti-label').textContent = meSelected;
+      document.getElementById('you-mbti-label').textContent = youSelected;
+    });
+
+
+    function restart() {
+      document.getElementById('result-page').style.display = 'none';
+      document.getElementById('select-page').style.display = 'block';
+    
+      // 선택된 결과 초기화
+      document.getElementById('me-result').innerHTML = '';
+      document.getElementById('you-result').innerHTML = '';
+
+      // 선택하기 버튼 다시 표시
+      document.getElementById('me-button').style.display = 'inline-block';
+      document.getElementById('you-button').style.display = 'inline-block';
+
+      // 선택 상태 초기화
+      currentTarget = null;
+      meSelected = null;
+      youSelected = null;
+
+      // MBTI 선택 UI 숨기기
+      disableMbtigounghabs();
+      
+    }
+
+    function getRelationshipComment(score) {
+      if (score <= 3) return '노력이 필요한 관계예요...';
+      if (score <= 6) return '보통이에요!';
+      return '최고의 상대를 찾았어요!';
+    }
+
+    function getExpressionImage(score) {
+      if (score <= 3) return "image/down.png";
+      if (score <= 6) return "image/middle.png";
+      return "./image/high.png";
+    }
+
+    disableMbtigounghabs();
+  </script>
+  </div>
+</body>
+</html>

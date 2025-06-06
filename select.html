@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBTI 선택</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+  <header class="site-header">
+    <a href="main.html" class="logo-link">
+      <img src="logo.png" alt="성격의 정원 로고" class="logo" />
+    </a>
+    <nav class="nav-menu">
+      <a href="test.html">MBTI 검사</a>
+      <a href="select.html">MBTI 유형소개</a>
+      <a href="gounghab.html">궁합 확인하기</a>
+    </nav>
+  </header>
+
+  <main>
+    <h4>| 나의 MBTI는?</h4>
+    <div class="mbti-grid">
+      <!-- MBTI 옵션 -->
+      <input type="radio" name="mbti" id="istj" value="ISTJ">
+      <label class="mbti-option" for="istj">
+        <img src="mbtiemoji\ISTJ.png" alt="ISTJ이모지">
+        <span>ISTJ</span>
+      </label>
+
+      <input type="radio" name="mbti" id="isfj" value="ISFJ">
+      <label class="mbti-option" for="isfj">
+         <img src="mbtiemoji\ISFJ.png" alt="ISFJ이모지">
+         <span>ISFJ</span>
+      </label>
+
+      <input type="radio" name="mbti" id="infj" value="INFJ">
+      <label class="mbti-option" for="infj">
+        <img src="mbtiemoji\INFJ.png" alt="INFJ이모지">
+        <span>INFJ</span>
+      </label>
+
+      <input type="radio" name="mbti" id="intj" value="INTJ">
+      <label class="mbti-option" for="intj">
+        <img src="mbtiemoji\INTJ.png" alt="INTJ이모지">
+        <span>INTJ</span>
+      </label>
+
+      <input type="radio" name="mbti" id="istp" value="ISTP">
+      <label class="mbti-option" for="istp">
+        <img src="mbtiemoji\ISTP.png" alt="ISTP이모지">
+        <span>ISTP</span>
+      </label>
+
+      <input type="radio" name="mbti" id="isfp" value="ISFP">
+      <label class="mbti-option" for="isfp">
+        <img src="mbtiemoji\ISFP.png" alt="ISFP이모지">
+        <span>ISFP</span>
+      </label>
+
+      <input type="radio" name="mbti" id="infp" value="INFP">
+      <label class="mbti-option" for="infp">
+        <img src="mbtiemoji\INFP.png" alt="INFP이모지">
+        <span>INFP</span>
+      </label>
+
+      <input type="radio" name="mbti" id="intp" value="INTP">
+      <label class="mbti-option" for="intp">
+        <img src="mbtiemoji\INTP.png" alt="INTP이모지">
+        <span>INTP</span>
+      </label>
+
+      <input type="radio" name="mbti" id="estp" value="ESTP">
+      <label class="mbti-option" for="estp">
+        <img src="mbtiemoji\ESTP.png" alt="ESTP이모지">
+        <span>ESTP</span>
+      </label>
+
+      <input type="radio" name="mbti" id="esfp" value="ESFP">
+      <label class="mbti-option" for="esfp">
+        <img src="mbtiemoji\ESFP.png" alt="ESFP이모지">
+        <span>ESFP</span>
+      </label>
+
+      <input type="radio" name="mbti" id="enfp" value="ENFP">
+      <label class="mbti-option" for="enfp">
+        <img src="mbtiemoji\ENFP.png" alt="ENFP이모지">
+        <span>ENFP</span>
+      </label>
+
+      <input type="radio" name="mbti" id="entp" value="ENTP">
+      <label class="mbti-option" for="entp">
+        <img src="mbtiemoji\ENTP.png" alt="ENTP이모지">
+        <span>ENTP</span>
+      </label>
+
+      <input type="radio" name="mbti" id="estj" value="ESTJ">
+      <label class="mbti-option" for="estj">
+        <img src="mbtiemoji\ESTJ.png" alt="ESTJ이모지">
+        <span>ESTJ</span>
+      </label>
+
+      <input type="radio" name="mbti" id="esfj" value="ESFJ">
+      <label class="mbti-option" for="esfj">
+        <img src="mbtiemoji\ESFJ.png" alt="ESFJ이모지">
+        <span>ESFJ</span>
+      </label>
+
+      <input type="radio" name="mbti" id="enfj" value="ENFJ">
+      <label class="mbti-option" for="enfj">
+        <img src="mbtiemoji\ENFJ.png" alt="ENFJ이모지">
+        <span>ENFJ</span>
+      </label>
+
+      <input type="radio" name="mbti" id="entj" value="ENTJ">
+      <label class="mbti-option" for="entj">
+        <img src="mbtiemoji\ENTJ.png" alt="ENTJ이모지">
+        <span>ENTJ</span>
+      </label>
+    </div>
+
+    <p>MBTI를 선택하고 다음 단계로 넘어가세요.</p>
+    <input type="submit" value="유형 확인" class="submitbtn">
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const submitBtn = document.querySelector('input[type="submit"]');
+
+      submitBtn.addEventListener("click", function () {
+        const selected = document.querySelector('input[name="mbti"]:checked');
+        if (!selected) {
+          alert("MBTI를 선택해주세요.");
+          return;
+        }
+
+        location.href = `result2.html?mbti=${selected.value}`;
+      });
+    });
+
+      // 버튼 해제
+    document.addEventListener("DOMContentLoaded", function () {
+      let selectedInput = null;
+
+      document.querySelectorAll('label.mbti-option').forEach(label => {
+        const inputId = label.getAttribute("for");
+        const input = document.getElementById(inputId);
+
+        label.addEventListener("click", function (e) {
+          // 이미 선택된 항목을 다시 클릭한 경우
+          if (input === selectedInput) {
+            input.checked = false;
+            selectedInput = null;
+            e.preventDefault(); // 클릭 이벤트 취소
+          } else {
+            selectedInput = input;
+          }
+        });
+      });
+    });
+
+  </script>
+  </div>
+</body>
+</html>
