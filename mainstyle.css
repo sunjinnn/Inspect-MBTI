@@ -54,6 +54,7 @@ header img.logo {
 }
 
 .intro-box {
+  font-weight: bold;
   font-size: 40px;
   padding: 40px;
   line-height: 1.6;
@@ -62,6 +63,14 @@ header img.logo {
   margin-bottom: 50px;
   text-align: center;
 }
+
+.intro-subtext {
+  font-weight: normal;
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
 
 @keyframes bounce {
   0%, 100% {
@@ -77,6 +86,7 @@ header img.logo {
     box-shadow: 0 4px 0 #8DAA63;
   }
 }
+
 .intro-box button {
   background: linear-gradient(145deg, #cde6bc, #b7d194);
   font-size: 28px;
@@ -129,8 +139,22 @@ header img.logo {
   text-align: center;
   line-height: 1.8;
   border-radius: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 
+}
+
+.step-guide {
+  font-size: 18px;
+  color: #555;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.step-guide::before {
+  content: "🧭 ";
+  font-size: 20px;
+  vertical-align: middle;
 }
 
 .steps {
@@ -144,6 +168,11 @@ header img.logo {
   margin: 5px;
   padding: 10px;
   border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.step:hover .step-image {
+  transform: scale(1.08);
 }
 
 .step-image {
@@ -152,7 +181,7 @@ header img.logo {
   margin-top: 12px;
   border-radius: 16px;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
 .step-desc {
@@ -160,6 +189,20 @@ header img.logo {
   line-height: 1.6;
   margin-top: 10px;
   color: #333;
+}
+
+.chat-guide {
+  font-size: 18px;
+  color: #555;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.chat-guide::before {
+  content: "🧭 ";
+  font-size: 20px;
+  vertical-align: middle;
 }
 
 .chat-box {
@@ -247,12 +290,16 @@ header img.logo {
 }
 
 .next-button {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-top: 30px;
+  gap: 30px;
 }
 
 .next-button button {
-  padding: 10px 20px;
+  font-size: 15px;
+  padding: 15px 50px;
   border-radius: 10px;
   background-color: #fdf1ef;
   border: none;
