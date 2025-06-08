@@ -21,7 +21,7 @@ header {
 }
 
 header img.logo {
-  height: 120px;
+  height: 50px;
   object-fit: contain;
   cursor: pointer;
 }
@@ -60,7 +60,7 @@ main {
   font-family: sans-serif;
 }
 
-h4 {
+h2 {
   margin-top: 60px;
   text-align: left;
   margin-bottom: 30px;
@@ -71,31 +71,30 @@ h4 {
   color: #555;
   text-align: left;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-weight: 500;
 }
 
 .mbti-option {
   position: relative;
-  width: 180px;            /* 가로 고정 */
-  height: 180px;           /* 세로 고정 */
-  /*border: 1px solid #000000;*/
+  width: 190px;            
+  height: 190px;          
   border-radius: 15px;
-  background-color: #f7f7f7;
+  background-color: #fff5ed;
   cursor: pointer;
-  transition: background-color 0.2s ease; /* 배경색 변할 때 부드럽게 변화*/
-  display: flex;           /* 가운데 정렬용 */
+  transition: background-color 0.2s ease; 
+  display: flex;           
   flex-direction: column;
-  align-items: center;     /* 수직 중앙 정렬 */
-  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center;     
+  justify-content: center; 
   font-weight: bold;
   font-size: 16px;
 }
 
 .mbti-option img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 1px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
 }
 
 .mbti-option span {
@@ -107,8 +106,8 @@ h4 {
 
 .mbti-option:hover {
   background-color: #ffffff; 
-  transform: scale(1.05);        /* 살짝 확대 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  transform: scale(1.05);      /
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 input[type="radio"] {
@@ -116,7 +115,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label {
-  background-color: #c7c7c7ab;
+  background-color: #f4ac72;
 }
 
 .mbti-grid {
@@ -124,20 +123,20 @@ input[type="radio"]:checked + label {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   justify-content: center;
-  max-width: 400px;
+  max-width: 800px;
   margin: 0 auto 20px;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .submitbtn {
-margin-top: 30px;
-    margin-bottom: 30px;
-  background-color: #7b8cd0;       /* 기본 배경색 */
-  color: white;                    /* 글자색 */
-  padding: 12px 24px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #f29e5a;       
+  color: white;                    
+  padding: 15px 27px;
   border: none;
-  border-radius: 999px;            /* pill 형태 */
+  border-radius: 999px;            
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -145,20 +144,21 @@ margin-top: 30px;
 }
 
 .submitbtn:hover {
-  background-color: #4255c3;       /* hover 시 색상 변경 */
-  transform: translateX(4px);      /* hover 시 오른쪽으로 이동 */
+  background-color: #ec7513;       
+  transform: translateX(4px);      
 }
 
 
 /* 궁합 페이지 */
 
 .intro h1 {
-  margin-top: 70px;
+  font-size: 40px;
+  margin-top: 50px;
 }
 
 .intro p {
-  margin: 2px 0;
-  margin-bottom : 70px;
+  font-size: 20px;
+  margin-bottom : 50px;
 }
 
 #mbti-grid {
@@ -171,7 +171,7 @@ margin-top: 30px;
   align-content: center;
   align-items: center;
   gap: 40px;
-  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .user-wrapper {
@@ -187,26 +187,25 @@ margin-top: 30px;
 }
 
 .user-box {
-  width: 160px;
-  height: 240px;
-  background-color: #e8e8e8;
-  border: 1px solid #5d5d5d;
+  width: 190px;
+  height: 290px;
+  background-color: #fdf1e7;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* flex-end에서 flex-start로 변경 */
+  justify-content: flex-start; 
   align-items: center;
   padding: 16px;
-  gap: 16px; /* result-box와 버튼 사이 간격 고정 */
+  gap: 16px; 
 }
 
 .result-box {
   width: 100%;
-  height: 140px;
+  height: 190px;
   background-color: #ffffff;
   border-radius: 8px;
   margin-bottom: 16px;
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -226,8 +225,8 @@ margin-top: 30px;
 }
 
 .heart img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 .status-buttons {
@@ -240,11 +239,10 @@ margin-top: 30px;
 
 .mbti-gounghab {
   position: relative;
-  width: 150px;            /* 가로 고정 */
-  height: 150px;           /* 세로 고정 */
-  /*border: 1px solid #000000;*/
+  width: 190px;            
+  height: 190px;     
   border-radius: 15px;
-  background-color: #f7f7f7;
+  background-color: #fff5ed;
   cursor: pointer;
   transition: background-color 0.2s ease; /* 배경색 변할 때 부드럽게 변화*/
   display: flex;           /* 가운데 정렬용 */
@@ -256,14 +254,15 @@ margin-top: 30px;
 }
 
 .mbti-gounghab:hover {
-  background-color: #e6e6e6;
+  background-color: #ffffff;
   transform: scale(1.3S); /*살짝 확대*/
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
 }
 
 .mbti-gounghab img {
   width: 100px;
   height: 100px;
+  margin-bottom: 15px;
 }
 
 
@@ -274,7 +273,7 @@ margin-top: 30px;
 
 /*나 선택하기 버튼*/
 #me-button {
-  background-color: #99c27c;
+  background-color: #f29e5a;
   color: white;
   padding: 12px 24px;
   border: none;
@@ -282,18 +281,18 @@ margin-top: 30px;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 6px #6e8f57; /* 그림자로 입체감 주기 */
+  box-shadow: 0 6px #ec7513; /* 그림자로 입체감 주기 */
   transition: all 0.1s ease;
 }
 
 #me-button:active {
   transform: translateY(4px);      /* 아래로 눌리는 느낌 */
-  box-shadow: 0 2px #6e8f57;       /* 그림자 위로 올라와서 눌린 느낌 */
+  box-shadow: 0 2px #ec7513;       /* 그림자 위로 올라와서 눌린 느낌 */
 }
 
 /*상대방 선택하기 버튼*/
 #you-button {
-  background-color: #99c27c;
+  background-color: #f29e5a;
   color: white;
   padding: 12px 24px;
   border: none;
@@ -301,19 +300,19 @@ margin-top: 30px;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 6px #6e8f57; /* 그림자로 입체감 주기 */
+  box-shadow: 0 6px #ec7513; /* 그림자로 입체감 주기 */
   transition: all 0.1s ease;
 }
 
 #you-button:active {
   transform: translateY(4px);      /* 아래로 눌리는 느낌 */
-  box-shadow: 0 2px #6e8f57;       /* 그림자 위로 올라와서 눌린 느낌 */
+  box-shadow: 0 2px #ec7513;       /* 그림자 위로 올라와서 눌린 느낌 */
 }
 
 #result-btn {
-  background-color: #7b8cd0;       /* 기본 배경색 */
+  background-color: #f29e5a;       /* 기본 배경색 */
   color: white;                    /* 글자색 */
-  padding: 12px 24px;
+  padding: 15px 27px;
   border: none;
   border-radius: 999px;            /* pill 형태 */
   font-size: 16px;
@@ -324,7 +323,7 @@ margin-top: 30px;
 }
 
 #result-btn:hover {
-  background-color: #4255c3;       /* hover 시 색상 변경 */
+  background-color: #ec7513;       /* hover 시 색상 변경 */
   transform: translateX(4px);      /* hover 시 오른쪽으로 이동 */
 }
 
@@ -335,12 +334,8 @@ margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-}
-
-.result-faces img {
-  object-fit: contain;
-  margin: 20px;
+  gap: 60px;
+  margin-top: 40px;
 }
 
 @keyframes bounce {
@@ -353,9 +348,9 @@ margin-top: 30px;
 }
 
 .result-faces .heart-icon {
-  width: 50px;
-  height: 50px;
-  animation: bounce 2.0s ease-in-out infinite;
+  width: 80px;
+  height: 80px;
+  animation: bounce 2s ease-in-out infinite;
   transform-origin: bottom center;
   margin: 10px;
 }
@@ -365,42 +360,88 @@ margin-top: 30px;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #ffe5d1;
+  border-radius: 24px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 40px;
 }
 
 .face-box .label {
   font-weight: bold;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 18px;
+  color: #4b4b4b;
 }
 
 .face-box .face {
-  width: 150px;
-  height: 150px;
-  border-radius: 12px;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #e6e6e6;
+  background-color: #ffffff;
   gap: 8px;
 }
 
 .face-box img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   margin: 0;
 }
 
 .face-box .mbti-text {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
+  color: #444;
 }
 
+.text {
+  text-align: center;
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#result-score {
+  font-size: 48px;
+  font-weight: bold;
+  color: #84ad52;
+  margin: 12px 0;
+}
+
+#result-comment {
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+}
+
+.caution-box {
+  background-color: #ffe5d1;
+  padding: 20px;
+  border-left: 8px solid #ffa407;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-top: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caution-box p {
+  margin: 0 0 10px;
+  font-weight: bold;
+  color: #444;
+}
 .restart {
-  background-color: #7b8cd0;       /* 기본 배경색 */
+  background-color: #abc982;       /* 기본 배경색 */
   color: white;                    /* 글자색 */
-  padding: 12px 24px;
+  padding: 15px 27px;
   border: none;
   border-radius: 999px;            /* pill 형태 */
   font-size: 16px;
@@ -412,13 +453,10 @@ margin-top: 30px;
 }
 
 .restart:hover {
-  background-color: #4255c3;       /* hover 시 색상 변경 */
+  background-color: #84ad52;       /* hover 시 색상 변경 */
   transform: translateX(4px);      /* hover 시 오른쪽으로 이동 */
 }
 
-.text {
-  text-align: center;
-}
 
 .site-footer {
   background-color: #f0f0f0;

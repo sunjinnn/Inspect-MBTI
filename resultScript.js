@@ -19,10 +19,10 @@ window.onload = function () {
   document.querySelector(".nickname").textContent = data.nickname;
 
   const traitColors = [
-    ["#ff9800", "#3f51b5"], // E / I
-    ["#8bc34a", "#673ab7"], // S / N
-    ["#2196f3", "#e91e63"], // T / F
-    ["#009688", "#9c27b0"]  // J / P
+    ["#4674a0", "#f6c297"], // E / I
+    ["#a9cc7d", "#89a9a8"], // S / N
+    ["#6c9142", "#cba36f"], // T / F
+    ["#8dbbb1", "#c8d0ae"]  // J / P
   ];
 
   const traitNames = [
