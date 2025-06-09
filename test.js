@@ -6,7 +6,7 @@ function renderQuestions() {
   const set = questionSets[currentPage];
 
   questionArea.innerHTML = set.map((item, i) => {
-  const saved = answers[currentPage * 4 + i]; // 0 또는 1 또는 undefined
+  const saved = answers[currentPage * 4 + i];
 
     return `
       <div class="question-box">
@@ -32,15 +32,13 @@ function renderQuestions() {
 }
 
 function selectOption(questionIndex, answerIndex, element) {
-    // 저장
   answers[currentPage * 4 + questionIndex] = answerIndex;
-
-    // 스타일 업데이트
   const buttons = element.parentNode.querySelectorAll("button");
   buttons.forEach(btn => btn.classList.remove("selected"));
   element.classList.add("selected");
   updateProgress();
 }
+
 function prevPage() {
 if (currentPage > 0) {
   currentPage--;
@@ -56,18 +54,14 @@ function nextPage() {
     alert("모든 문항에 응답해 주세요.");
     return;
   }
-
   currentPage++;
-
   if (currentPage >= questionSets.length) {
     const mbti = calculateMBTI();
     const traits = calculateTraits();
     const traitsParam = encodeURIComponent(JSON.stringify(traits));
     window.location.href = `result.html?mbti=${mbti}&traits=${traitsParam}`;
     return;
-  }
-
-      
+  } 
   renderQuestions();
 }
 
@@ -75,7 +69,7 @@ function calculateMBTI() {
   let EI = 0, SN = 0, TF = 0, JP = 0;
 
   for (let i = 0; i < answers.length; i++) {
-    const typeIndex = Math.floor(i / 10); // 10문항씩 구분
+    const typeIndex = Math.floor(i / 10);
     const answer = answers[i];
 
   if (typeIndex === 0) EI += answer === 0 ? 1 : -1;
@@ -89,7 +83,7 @@ return `${EI >= 0 ? "E" : "I"}${SN >= 0 ? "S" : "N"}${TF >= 0 ? "T" : "F"}${JP >
 
 window.onload = renderQuestions;
 function updateProgress() {
-  const totalQuestions = questionSets.length * 4; // 총 문항 수
+  const totalQuestions = questionSets.length * 4;
   const answered = answers.filter(a => a !== undefined).length;
   const percent = (answered / totalQuestions) * 100;
 
@@ -106,8 +100,8 @@ function calculateTraits() {
       const index = i * 10 + j;
       if (answers[index] === 1) score++;
     }
-    results.push(score * 10); // 퍼센트 계산
+    results.push(score * 10);
   }
 
-  return results; // 예: [40, 60, 50, 70]
+  return results;
 }

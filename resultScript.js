@@ -60,10 +60,6 @@ window.onload = function () {
     rightLabel.textContent = traitNames[i][1];
   });
 
-
-
-
-  // 커리어
   document.querySelector(".career-tags").innerHTML = data.career
     .map(job => `<div class="tag">${job}</div>`)
     .join("");
@@ -83,11 +79,9 @@ window.onload = function () {
   document.querySelector(".mbti-weaknesses").innerHTML =
   data.weaknesses.map(item => `<li>${item}</li>`).join("") + `</ul>`;
 
-  // matchGood, matchBad 가져오기
   const matchGood = data.matchGood || [];
   const matchBad = data.matchBad || [];
 
-  // 출력 HTML 만들기
   const goodHtml = matchGood.map(m =>
     `<div><span class="match-good">👍 ${m.type}</span><span class="match-desc"> - ${m.summary}</span></div>`
   ).join("");
@@ -96,7 +90,6 @@ window.onload = function () {
     `<div><span class="match-bad">👎 ${m.type}</span><span class="match-desc"> - ${m.summary}</span></div>`
   ).join("");
 
-  // HTML에 대입
   document.getElementById("matchGood").innerHTML = goodHtml;
   document.getElementById("matchBad").innerHTML = badHtml;
 
