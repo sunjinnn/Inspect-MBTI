@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI 검사 결과</title>
+  <link rel="icon" type="image/png" href="image/favicon.png">
+  <link rel="stylesheet" href="mainstyle.css" />
+  <script src="resultData.js"></script>
+  <script src="resultScript2.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="main.html" class="logo-link">
+        <img src="image/logo.png" alt="성격의 정원 로고" class="logo" />
+      </a>
+      <nav class="nav-menu">
+        <a href="test.html">MBTI 검사</a>
+        <a href="select.html">MBTI 유형소개</a>
+        <a href="gounghab.html">궁합 확인하기</a>
+      </nav>
+    </header>
+
+
+    <div class="result-summary">
+      <h2 id="mbti-result"></h2>
+      <img id="mbti-image" class="mbti-image" src="" alt="MBTI 이모지">
+      <p class="mbti-code">당신의 성격 유형: <span class="nickname"></span></p>
+      <div class="mbti-description desc-box"></div>
+    </div>
+
+    <div class="result-section">
+      <h3>추천 직업</h3>
+      <div class="career-tags"></div>
+
+      <h3>나와 같은 mbti를 가진 연예인</h3>
+      <div class="mbti-celebrities"></div>
+
+      <h3>내 mbti의 장점</h3>
+      <div class="mbti-strengths"></div>
+
+      <h3>내 mbti의 단점</h3>
+      <div class="mbti-weaknesses"></div>
+
+      <h3>개인적 성장</h3>
+      <div id="growth" class="desc-box"></div>
+
+      <h3>인간 관계</h3>
+      <div id="relationship" class="desc-box"></div>
+
+      <h3>좋은 궁합</h3>
+      <div id="matchGood" class="desc-box"></div>
+
+      <h3>나쁜 궁합</h3>
+      <div id="matchBad" class="desc-box"></div>
+
+
+    </div>
+
+    <div class="result-buttons">
+      <a href="select.html" class="btn retry">다시 선택하러 가기</a>
+    </div>
+  
+  </div>
+
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p class="footer-logo">성격의 정원</p>
+    <p>© 2025 성격의 정원. - 김해진, 이수진</p>
+  </div>
+  </footer>
+  
+</body>
+</html>
