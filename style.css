@@ -209,19 +209,19 @@ input[type="radio"]:checked + label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /* 크기 고정 */
+  flex-shrink: 0;
 }
 
 .result-box img {
   width: 95px;
   height: 95px;
   object-fit: contain;
-  margin-bottom: -15px; /* 이미지 아래 여백 줄이기 */
+  margin-bottom: -15px; 
 }
 
 .result-box span {
   font-size: 14px;
-  margin-top: 0; /* 텍스트 위 여백 제거 */
+  margin-top: 0; 
 }
 
 .heart img {
@@ -244,19 +244,19 @@ input[type="radio"]:checked + label {
   border-radius: 15px;
   background-color: #fff5ed;
   cursor: pointer;
-  transition: background-color 0.2s ease; /* 배경색 변할 때 부드럽게 변화*/
-  display: flex;           /* 가운데 정렬용 */
+  transition: background-color 0.2s ease; 
+  display: flex;          
   flex-direction: column;
-  align-items: center;     /* 수직 중앙 정렬 */
-  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center;     
+  justify-content: center; 
   font-weight: bold;
   font-size: 16px;
 }
 
 .mbti-gounghab:hover {
   background-color: #ffffff;
-  transform: scale(1.3S); /*살짝 확대*/
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  transform: scale(1.3S); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .mbti-gounghab img {
@@ -271,7 +271,7 @@ input[type="radio"]:checked + label {
   opacity: 0.3;
 }
 
-/*나 선택하기 버튼*/
+
 #me-button {
   background-color: #f29e5a;
   color: white;
@@ -281,16 +281,16 @@ input[type="radio"]:checked + label {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 6px #ec7513; /* 그림자로 입체감 주기 */
+  box-shadow: 0 6px #ec7513; 
   transition: all 0.1s ease;
 }
 
 #me-button:active {
-  transform: translateY(4px);      /* 아래로 눌리는 느낌 */
-  box-shadow: 0 2px #ec7513;       /* 그림자 위로 올라와서 눌린 느낌 */
+  transform: translateY(4px);     
+  box-shadow: 0 2px #ec7513;      
 }
 
-/*상대방 선택하기 버튼*/
+
 #you-button {
   background-color: #f29e5a;
   color: white;
@@ -300,21 +300,21 @@ input[type="radio"]:checked + label {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 6px #ec7513; /* 그림자로 입체감 주기 */
+  box-shadow: 0 6px #ec7513; 
   transition: all 0.1s ease;
 }
 
 #you-button:active {
-  transform: translateY(4px);      /* 아래로 눌리는 느낌 */
-  box-shadow: 0 2px #ec7513;       /* 그림자 위로 올라와서 눌린 느낌 */
+  transform: translateY(4px);      
+  box-shadow: 0 2px #ec7513;      
 }
 
 #result-btn {
-  background-color: #f29e5a;       /* 기본 배경색 */
-  color: white;                    /* 글자색 */
+  background-color: #f29e5a;       
+  color: white;                    
   padding: 15px 27px;
   border: none;
-  border-radius: 999px;            /* pill 형태 */
+  border-radius: 999px;           
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -323,12 +323,12 @@ input[type="radio"]:checked + label {
 }
 
 #result-btn:hover {
-  background-color: #ec7513;       /* hover 시 색상 변경 */
-  transform: translateX(4px);      /* hover 시 오른쪽으로 이동 */
+  background-color: #ec7513;       
+  transform: translateX(4px);      
 }
 
 
-/**궁합 확인**/
+/*궁합 확인*/
 
 .result-faces {
   display: flex;
@@ -439,11 +439,11 @@ input[type="radio"]:checked + label {
   color: #444;
 }
 .restart {
-  background-color: #abc982;       /* 기본 배경색 */
-  color: white;                    /* 글자색 */
+  background-color: #abc982;       
+  color: white;                    
   padding: 15px 27px;
   border: none;
-  border-radius: 999px;            /* pill 형태 */
+  border-radius: 999px;            
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
@@ -453,8 +453,8 @@ input[type="radio"]:checked + label {
 }
 
 .restart:hover {
-  background-color: #84ad52;       /* hover 시 색상 변경 */
-  transform: translateX(4px);      /* hover 시 오른쪽으로 이동 */
+  background-color: #84ad52;       
+  transform: translateX(4px);      
 }
 
 

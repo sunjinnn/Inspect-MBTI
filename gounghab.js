@@ -22,7 +22,6 @@ const mbtiScoreMap = {
 };
 
 function startSelection(target) {
-  // 현재 선택 중이면서 다른 대상 선택 시 차단
   if (currentTarget && currentTarget !== target) {
     alert("다른 창에서 선택 중입니다. 먼저 완료하거나 닫아주세요.");
     return;
@@ -50,7 +49,7 @@ function cancelSelection(target) {
 function selectMbti(type) {
   if (!currentTarget) return;
 
-  const target = currentTarget; // ✅ 재선택 대비 안전하게 보관
+  const target = currentTarget; 
 
   const resultBox = document.getElementById(`${target}-result`);
   resultBox.innerHTML = `<img src="mbtiemoji/${type}.png" alt="${type}"><br><span>${type}</span>`;
@@ -60,7 +59,7 @@ function selectMbti(type) {
 
   const button = document.getElementById(`${target}-button`);
   button.textContent = "선택하기";
-  button.onclick = () => startSelection(target); // ✅ 항상 올바른 대상 유지
+  button.onclick = () => startSelection(target); 
 
   disableMbtigounghabs();
 
@@ -85,20 +84,17 @@ function restart() {
     document.getElementById('result-page').style.display = 'none';
     document.getElementById('select-page').style.display = 'block';
     
-    // 선택된 결과 초기화
+    
     document.getElementById('me-result').innerHTML = '';
     document.getElementById('you-result').innerHTML = '';
-
-    // 선택하기 버튼 다시 표시
+    
       document.getElementById('me-button').style.display = 'inline-block';
       document.getElementById('you-button').style.display = 'inline-block';
 
-      // 선택 상태 초기화
       currentTarget = null;
       meSelected = null;
       youSelected = null;
 
-      // MBTI 선택 UI 숨기기
       disableMbtigounghabs();
 }
 
@@ -133,7 +129,7 @@ function showResultPage() {
   }
 
     const score = mbtiScoreMap[me]?.[you];
-    const warning = getWarningMessage(score); // 이미 정의된 경고 메시지 함수 사용
+    const warning = getWarningMessage(score); 
     const faceImage = getExpressionImage(score);
 
     document.getElementById("select-page").style.display = "none";
